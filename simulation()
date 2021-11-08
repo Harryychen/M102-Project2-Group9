@@ -1,0 +1,25 @@
+def simulation(e, t):
+    exploitcount = 0
+    explorecount = 0
+    greedycount = 0
+    totalgreedyhappiness = 0
+    totalexploithappiness = 0
+    totalexplorehappiness = 0
+    while greedycount < t:
+        thisSim = eGreedy(e)
+        totalgreedyhappiness += thisSim
+        greedycount += 1
+    while explorecount < t:
+        thisSim = exploreOnly()
+        totalexplorehappiness += thisSim
+        explorecount += 1
+    while exploitcount < t:
+        thisSim = exploitOnly()
+        totalexploithappiness += thisSim
+        exploitcount += 1
+    greedyaverage = totalgreedyhappiness/greedycount
+    exploreaverage = totalexplorehappiness/explorecount
+    exploitaverage = totalexploithappiness/exploitcount
+    expectHappy = 100*h1 + 100*h2 + 100*h3
+    exploitexpected = h1 + h2 + h3 + 297*h3
+    greedyexpected = ___*300*h3 + ___*300*h1 + ___*300*h2+ ___*300*h3
