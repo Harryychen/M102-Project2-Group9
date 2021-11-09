@@ -1,0 +1,21 @@
+import random
+def explore():
+
+    totalHappiness = 0
+    for i in ['c1','c2','c3']:
+        if i == 'c1':
+            mean = 9
+            deviation = 3
+        elif i == 'c2':
+            mean = 7
+            deviation = 5
+        elif i == 'c3':
+            mean = 11
+            deviation = 7
+        for j in range(1, 100):
+            totalHappiness += random.normalvariate(mean, deviation)
+
+    print('total sum', totalHappiness)
+
+if __name__== "__main__":
+    explore()
