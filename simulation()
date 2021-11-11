@@ -6,20 +6,20 @@ def simulation(e, t):
     totalexploithappiness = 0
     totalexplorehappiness = 0
     while greedycount < t:
-        thisSim = eGreedy(e)
-        totalgreedyhappiness += thisSim
+        simu = eGreedy(e)
+        totalgreedyhappiness += simu
         greedycount += 1
     while explorecount < t:
-        thisSim = exploreOnly()
-        totalexplorehappiness += thisSim
+        simu = exploreOnly()
+        totalexplorehappiness += simu
         explorecount += 1
     while exploitcount < t:
-        thisSim = exploitOnly()
-        totalexploithappiness += thisSim
+        simu = exploitOnly()
+        totalexploithappiness += simu
         exploitcount += 1
-    greedyaverage = totalgreedyhappiness/greedycount
-    exploreaverage = totalexplorehappiness/explorecount
-    exploitaverage = totalexploithappiness/exploitcount
-    expectHappy = 100*h1 + 100*h2 + 100*h3
-    exploitexpected = h1 + h2 + h3 + 297*h3
-    greedyexpected = ___*300*h3 + ___*300*h1 + ___*300*h2+ ___*300*h3
+    averagegreedy = totalgreedyhappiness/greedycount
+    averageexplore = totalexplorehappiness/explorecount
+    averageexploit = totalexploithappiness/exploitcount
+    expectedHappy = 100*h1 + 100*h2 + 100*h3
+    expectedexploit = h1 + h2 + h3 + 297*( ) #put the highest value in parentheses and remove the parentheses. if its h1 then put h1 in parentheses
+    expectedgreedy = ___*300*h3 + ___*300*h1 + ___*300*h2+ ___*300*h3
