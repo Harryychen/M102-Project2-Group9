@@ -34,8 +34,15 @@ def eGreedy(e):
 
     return cafe_happiness;
 
-def exploitOnly(H1:int, D1:int, H2:int, D2:int, H3:int, D3:int):
+def exploitOnly():
     import random
+    #Input values
+    H1 = 9
+    D1 = 3
+    H2 = 7
+    D2 = 5
+    H3 = 11
+    D3 = 7
     c1Happy = random.normalvariate(H1, D1)  #Happyvalue of Cafe1
     c2Happy = random.normalvariate(H2, D2)  #Happyvalue of Cafe2
     c3Happy = random.normalvariate(H3, D3)  #Happyvalue of Cafe3
@@ -62,7 +69,6 @@ def exploitOnly(H1:int, D1:int, H2:int, D2:int, H3:int, D3:int):
     print(optimumHappy)
     print(expectHappy)
     print(regretHappy)
-
     import random
 def exploreOnly():
     totalHappiness = 0
