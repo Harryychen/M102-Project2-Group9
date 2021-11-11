@@ -113,5 +113,5 @@ def simulation(e, t):
         averageexplore = totalexplorehappiness / explorecount
         averageexploit = totalexploithappiness / exploitcount
         expectedHappy = 100 * h1 + 100 * h2 + 100 * h3
-        expectedexploit = h1 + h2 + h3 + 297 *h3
+        expectedexploit = h1 + h2 + h3 + 297 *maxHappy
         expectedgreedy = ___ * 300 * h3 + ___ * 300 * h1 + ___ * 300 * h2 + ___ * 300 * h3
