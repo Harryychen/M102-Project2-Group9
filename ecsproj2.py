@@ -114,4 +114,7 @@ def simulation(e, t):
         averageexploit = totalexploithappiness / exploitcount
         expectedHappy = 100 * h1 + 100 * h2 + 100 * h3
         expectedexploit = h1 + h2 + h3 + 297 *maxHappy
-        expectedgreedy = ___ * 300 * h3 + ___ * 300 * h1 + ___ * 300 * h2 + ___ * 300 * h3
+        expectedgreedy = 0
+    for i in range(len(cafe_day)):
+        expectedgreedy += cafe_day[i] * cafe_happiness[i]
+    
