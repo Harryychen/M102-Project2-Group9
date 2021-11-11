@@ -27,14 +27,14 @@ def eGreedy(e):
             chosen_cafe=chosen_cafe+1;
             cafe_day[chosen_cafe-1]=cafe_day[chosen_cafe-1]+1;
             cafe_happiness[chosen_cafe-1]=(cafe_happiness[chosen_cafe-1]*(cafe_day[chosen_cafe-1]-1)+random.normalvariate(cafe_hcoeff[chosen_cafe-1],cafe_dcoeff[chosen_cafe-1]))/cafe_day[chosen_cafe-1];
-    totalhappy = 0
+    totalhappye = 0
     for i in range(len(cafe_day)):
-        totalhappy += cafe_day[i] * cafe_happiness[i]
-    print(totalhappy)
+        totalhappye += cafe_day[i] * cafe_happiness[i]
+    print(totalhappye)
     print(cafe_day);
     print(cafe_happiness);
 
-    return cafe_happiness;
+    return totalhappye;
 
 def exploitOnly():
     global maxHappy
@@ -67,6 +67,7 @@ def exploitOnly():
 
     regretHappy = optimumHappy - totalHappy     #solved for the regret
 
+    return expectHappy
     #print result:
     print(totalHappy)
     print(optimumHappy)
@@ -88,7 +89,8 @@ def exploreOnly():
         for j in range(1, 100):
             totalHappiness += random.normalvariate(mean, deviation)
 
-        print('total sum', totalHappiness)
+    return totalHappiness
+    print('total sum', totalHappiness)
 
     if __name__ == "__main__":
         exploreOnly()
