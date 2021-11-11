@@ -1,4 +1,3 @@
-# M102-Project2-Group9
 import random;
 def eGreedy(e):
     print("test")
@@ -26,8 +25,13 @@ def eGreedy(e):
             chosen_cafe=chosen_cafe+1;
             cafe_day[chosen_cafe-1]=cafe_day[chosen_cafe-1]+1;
             cafe_happiness[chosen_cafe-1]=(cafe_happiness[chosen_cafe-1]*(cafe_day[chosen_cafe-1]-1)+random.normalvariate(cafe_hcoeff[chosen_cafe-1],cafe_dcoeff[chosen_cafe-1]))/cafe_day[chosen_cafe-1];
+    totalhappy = 0
+    for i in range(len(cafe_day)):
+        totalhappy += cafe_day[i] * cafe_happiness[i]
+    print(totalhappy)
     print(cafe_day);
     print(cafe_happiness);
+
     return cafe_happiness;
 
 def exploitOnly(H1:int, D1:int, H2:int, D2:int, H3:int, D3:int):
